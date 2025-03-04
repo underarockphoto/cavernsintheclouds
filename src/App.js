@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Slideshow from './components/slideshow/Slideshow';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importing Router components
+import NavBar from './components/navbar/Navbar';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <h1>Caverns in the Clouds</h1>
+      <h2>The Story of Laurel Caverns</h2>
+      <Routes>
+        <Route path="/" element={<Slideshow/>}/>
+      </Routes>
+      <NavBar/>
+      </div>
+    </Router>
+    
   );
 }
 

@@ -1,0 +1,17 @@
+a{
+    color:white;
+    text-decoration:none;
+    font-family:'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+a.active{
+    text-decoration: underline;
+}
+div.navBar{
+    width:100vw;
+    max-width:80vw;
+    height:10vw;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
