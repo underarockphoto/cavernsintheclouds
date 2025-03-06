@@ -3,6 +3,7 @@ import Slideshow from './components/slideshow/Slideshow';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importing Router components
 import NavBar from './components/navbar/Navbar';
 import Order from './components/order/Order';
+import Excerpts from './components/excerpts/Excerpts';
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Slideshow/>}/>
         <Route path="/order" element={<Order/>}/>
+        <Route path="/excerpts" element={<Excerpts/>}/>
       </Routes>
       <NavBar/>
       </div>

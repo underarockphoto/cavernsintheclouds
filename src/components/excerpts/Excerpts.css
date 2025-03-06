@@ -1,0 +1,71 @@
+#excerptsContainer{
+    position: relative;
+    width:100vw;
+    height:80vh;
+    overflow: hidden; /* Hide overflowing images */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+}
+#contentsContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width:150px;
+}
+div#contentsContainer>button{
+    border:none;
+    background-color: transparent;
+    color:white;
+    font-family: 'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:150px;
+    text-align: left;
+    height:30px;
+}
+div#contentsContainer>button:hover{
+    background-color:gray;
+    cursor:pointer;
+}
+.hidden{
+    display:none;
+    visibility:hidden;
+}
+.page{
+    width:calc(100vw - 180px);
+    height:80vh;
+    object-fit: contain;
+    background-color: rgb(35, 35, 35);
+}
+.active{
+    text-decoration: underline;
+}
+@media (max-width: 1000px){
+    #excerptsContainer{
+        flex-direction: column;
+    }
+    #contentsContainer{
+        width:100%;
+        height:100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .page{
+        width:100%;
+        height:60vh;
+        object-fit: contain;
+        background-color: rgb(35, 35, 35);
+    }
+    div#contentsContainer>button{
+        border:none;
+        background-color: transparent;
+        color:white;
+        font-family: 'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width:150px;
+        text-align: center;
+        height:50px;
+    }
+  }
