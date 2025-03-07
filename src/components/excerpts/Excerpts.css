@@ -16,6 +16,7 @@
     justify-content: start;
     align-items: start;
     width:150px;
+    margin-top:20px;
 }
 div#contentsContainer>button{
     border:none;
@@ -36,7 +37,7 @@ div#contentsContainer>button:hover{
 }
 .page{
     width:calc(100vw - 180px);
-    height:80vh;
+    height:77vh;
     object-fit: contain;
     background-color: rgb(35, 35, 35);
 }
@@ -52,6 +53,7 @@ div#contentsContainer>button:hover{
         height:100%;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top:0px;
     }
     .page{
         width:100%;
