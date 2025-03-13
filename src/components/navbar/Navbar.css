@@ -1,7 +1,8 @@
 a{
     color:white;
     text-decoration:none;
-    font-family:'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:10px;
 }
 a.active{
     text-decoration: underline;
@@ -14,4 +15,13 @@ div.navBar{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media (max-width:500px){
+    div.navBar{
+        height:10vh;
+    }
+a{
+    font-size: small
+}
 }

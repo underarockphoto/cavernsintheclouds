@@ -17,9 +17,12 @@ function Excerpts(){
     const contents = ['Front Cover','Table of Contents','Cave Description','Chapter Intros','History','Photo Essay','Geology','Speleogenesis','Flora and Fauna','Bats','Back Cover']
     const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11]
     const [page,setPage] = useState(0)
+    const [zoom,setZoom] = useState(false)
     const Contents = ()=>{
         return(
             <div id='contentsContainer'>
+                <div>Contents</div>
+                <div>Click image to zoom in/out</div>
                 {contents.map((content,index)=>{
                   return (<button className={page===index?"active":""} onClick={()=>setPage(index)}>{content}</button>)
                 })}
@@ -28,7 +31,7 @@ function Excerpts(){
     }
     const Pages = ()=>{
         return(
-            <div id='pagesContainer'>
+            <div id='pagesContainer' onClick={()=>setZoom(!zoom)} className={zoom?"zoom":""}>
                 {photos.map((photo,i)=>{
                     return(<img src={photo} className={page===i?"page":"hidden"}></img>)
                 })}

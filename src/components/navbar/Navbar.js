@@ -9,13 +9,16 @@ function NavBar(){
                 <a className={location.pathname==="/"?"active":""}href='/'>Slideshow</a>
             </div>
             <div className='navButton'>
-                <a href='/excerpts'>Excerpts</a>
+                <a className={location.pathname==="/excerpt"?"active":""} href='/excerpts'>Excerpts</a>
+            </div>
+            <div className='navButton'>
+                <a className={location.pathname==="/launch"?"active":""} href='/launch'>Book Launch</a>
             </div>
             <div className='navButton'>
                 <a className={location.pathname==="/order"?"active":""} href='/order'>Order</a>
             </div>
             <div className='navButton'>
-                <a href='/about'>About</a>
+                <a className={location.pathname==="/about"?"active":""} href='/about'>About</a>
             </div>
         </div>
     )

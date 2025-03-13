@@ -15,18 +15,29 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    width:150px;
+    width:200px;
     margin-top:20px;
 }
-div#contentsContainer>button{
+div#contentsContainer>button,div#contentsContainer>div{
     border:none;
     background-color: transparent;
     color:white;
     font-family: 'Poppins-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width:150px;
+    width:200px;
     text-align: left;
     height:30px;
 }
+div#contentsContainer>div:first-of-type{
+    font-size:medium;
+    border-bottom:1px solid white;
+    margin:0px;
+}
+div#contentsContainer>div:last-of-type{
+    font-size:smaller;
+    font-style: italic;
+    margin-bottom:0px;
+}
+
 div#contentsContainer>button:hover{
     background-color:gray;
     cursor:pointer;
@@ -35,11 +46,25 @@ div#contentsContainer>button:hover{
     display:none;
     visibility:hidden;
 }
-.page{
-    width:calc(100vw - 180px);
-    height:77vh;
+div#pagesContainer{
+    display:flex;
+ 
+    width:calc(100vw - 200px);
+    height:100%;
+}
+.zoom{
+    overflow:scroll;
+}
+div#pagesContainer.zoom>img{
+    width:200%;
+    height:200%;
     object-fit: contain;
-    background-color: rgb(35, 35, 35);
+}
+.page{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    background-color: rgb(82, 82, 82);
 }
 .active{
     text-decoration: underline;
@@ -50,10 +75,21 @@ div#contentsContainer>button:hover{
     }
     #contentsContainer{
         width:100%;
-        height:100%;
-        flex-direction: row;
-        flex-wrap: wrap;
+        height:200px;
+        flex-direction: column;
+        align-items: center;
+        overflow:scroll;
         margin-top:0px;
+    }
+    div#pagesContainer{
+        width:100vw;
+        height:100%;
+    }
+    div#pagesContainer.zoom>img{
+        width:300%;
+    height:300%;
+    object-fit: contain;
+
     }
     .page{
         width:100%;
@@ -69,5 +105,12 @@ div#contentsContainer>button:hover{
         width:150px;
         text-align: center;
         height:50px;
+    }
+    div#contentsContainer>div{
+        width:100%;
+        text-align: center;
+    }
+    div#contentsContainer>div:first-of-type{
+        border:none;
     }
   }
