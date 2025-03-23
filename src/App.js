@@ -1,10 +1,11 @@
 import './App.css';
 import Slideshow from './components/slideshow/Slideshow';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importing Router components
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import NavBar from './components/navbar/Navbar';
 import Order from './components/order/Order';
 import Excerpts from './components/excerpts/Excerpts';
 import About from './components/about/About';
+import Launch from './components/launch/Launch';
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/order" element={<Order/>}/>
         <Route path="/excerpts" element={<Excerpts/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/launch" element={<Launch/>}/>
       </Routes>
       <NavBar/>
       </div>
